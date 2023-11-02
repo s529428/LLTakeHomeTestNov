@@ -1,0 +1,27 @@
+.hero {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url('/assets/images/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 1rem;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+
+    .hero-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &>* {
+            margin: 0;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}

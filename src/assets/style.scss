@@ -1,0 +1,11 @@
+@import url(./fonts/font.scss);
+
+@import './abstracts/index.scss';
+@import './base/index.scss';
+@import './components/index.scss';
+@import './layout/index.scss';
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
