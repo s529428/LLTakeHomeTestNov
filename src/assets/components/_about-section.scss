@@ -9,8 +9,10 @@
     }
 
     .about-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+            display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: min-content min-content min-content;
+                gap: 32px 40px;
+                margin: 32px 0;
     }
 }

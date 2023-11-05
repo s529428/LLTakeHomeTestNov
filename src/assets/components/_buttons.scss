@@ -26,7 +26,7 @@
     color: $green;
     white-space: nowrap;
     text-decoration: none;
-    padding: 8px 54px;
+    padding: 12px 40.5px;
     margin: 0.25rem;
     cursor: pointer;
 
@@ -35,4 +35,22 @@
         background-color: $green;
         color: $white;
     }
+}
+.glide__arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin: 32px 0 42px;
+
+    @media screen and (min-width: 576px) {
+        margin: 64px 0 83px;
+    }
+}
+
+.glide__arrow {
+    border-radius: 100%;
+    background-color: $pale-blue;
+    border: 0;
+    padding: 34px;
 }

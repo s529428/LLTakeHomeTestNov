@@ -10,8 +10,6 @@ h2 {
     font-weight: 700;
     line-height: 56px;
     font-family: $font-family;
-    margin-top: 32px;
-        margin-bottom: 32px;
 }
 
 h3 {
@@ -85,6 +83,25 @@ h6 {
     color: $gray;
 }
 
+.bg-light-gray {
+    background-color: $light-gray;
+}
+
+.bg-blue {
+    background-color: $blue;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
 p {
     @extend .regular-body;
+}
+section,
+.contained-content {
+    padding: 50px;
 }

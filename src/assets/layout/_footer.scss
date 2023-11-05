@@ -1,0 +1,59 @@
+footer {
+    padding: 70px 52px 30px;
+
+    a {
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .footer-link {
+        @extend .regular-body;
+    }
+
+    .footer-link__large {
+        @extend .large-body;
+        margin: 24px 0;
+        display: inline-block;
+
+
+    }
+
+    .legal-links {
+        display: flex;
+        flex-direction: row;
+        gap: 75px;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    hr {
+        margin-top: 60px;
+    }
+
+    section {
+        padding: auto;
+    }
+
+    .footer-section-title {
+        @extend .regular-body;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 20px;
+    }
+
+    .footer-link-group {
+        list-style: none;
+        padding-inline-start: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}

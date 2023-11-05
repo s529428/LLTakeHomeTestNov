@@ -1,0 +1,10 @@
+.card {
+    background-color: $white;
+    padding: 68px 24px;
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
