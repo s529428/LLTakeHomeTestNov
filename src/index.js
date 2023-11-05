@@ -1,6 +1,7 @@
 import './assets/style.scss';
 import Glide from '@glidejs/glide';
 
+
 function expandMobileMenu() {
     var mobileMenuSection = document.getElementById("menu");
     if (mobileMenuSection.style.display === "block") {
