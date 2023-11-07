@@ -105,9 +105,14 @@ nav {
 
 @media screen and (min-width: 1200px) {
     nav {
-        .menu .page-menu {
-            gap: 61px;
-            justify-content: center;
+        .menu {
+            .page-menu {
+                gap: 61px;
+                justify-content: center;
+                .menu-item {
+                    padding: unset;
+                }
+            }
         }
     }
 }
