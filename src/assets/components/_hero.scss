@@ -1,5 +1,6 @@
 .hero {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url('/assets/images/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
+        url("/assets/images/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -14,7 +15,7 @@
         flex-direction: column;
         gap: 24px;
 
-        &>* {
+        & > * {
             margin: 0;
         }
     }
@@ -23,5 +24,18 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .hero {
+        background-size: 100%;
+        animation: zoomEffect 60s linear infinite;
+    }
+}
+@media screen and (min-width: 992px) {
+    .hero-inner {
+        max-width: 970px;
+        margin: auto;
     }
 }

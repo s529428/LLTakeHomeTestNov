@@ -1,5 +1,30 @@
 import './assets/style.scss';
-import Glide from '@glidejs/glide';
+import 'jquery';
+
+jQuery(function() {
+    jQuery('.glide__slides').slick({
+        centerMode: true,
+        centerPadding: '20%',
+        infinite: true,
+        arrows: false,
+        slidesToShow: 1,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+    jQuery('.glide__arrow--left').on('click', function(){
+        jQuery('.glide__slides').slick('slickPrev');
+    });
+    jQuery('.glide__arrow--right').on('click', function() {
+        jQuery('.glide__slides').slick('slickNext');
+    })
+});
+
 
 
 function expandMobileMenu() {
@@ -13,23 +38,7 @@ function expandMobileMenu() {
 
 document.getElementById("mobileMenuButton").addEventListener("click", expandMobileMenu);
 
-new Glide('.glide', {
-    type: 'carousel',
-    perView: 1,
-    focusAt: 'center',
-    peek: 320,
-    gap: 32,
-    breakpoints: {
-        576: {
-            perView: 1,
-            peek: 32
-        },
-        768: {
-            perView: 1,
-            peek: 150
-        }
-    }
-}).mount();
+
 
 const validateEmail = (email) => {
     return String(email)

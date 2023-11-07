@@ -1,5 +1,10 @@
 footer {
     padding: 70px 52px 30px;
+    color: $white;
+
+    address {
+        font-style: normal;
+    }
 
     a {
         text-decoration: none;
@@ -18,8 +23,6 @@ footer {
         @extend .large-body;
         margin: 24px 0;
         display: inline-block;
-
-
     }
 
     .legal-links {
@@ -39,7 +42,7 @@ footer {
     }
 
     section {
-        padding: auto;
+        padding: 0;
     }
 
     .footer-section-title {
@@ -55,5 +58,52 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 12px;
+    }
+    .footer-navigation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 30px 10px;
+        grid-template-areas:
+            "footerinfo footerinfo"
+            "footerexplore footermusic"
+            "footerartists footerrecords";
+    }
+
+    .footer-info {
+        grid-area: footerinfo;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-explore {
+        grid-area: footerexplore;
+    }
+
+    .footer-music {
+        grid-area: footermusic;
+    }
+
+    .footer-artists {
+        grid-area: footerartists;
+    }
+
+    .footer-records {
+        grid-area: footerrecords;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    footer {
+        .footer-navigation {
+            grid-template-columns: 225px 1fr 1fr 1fr 1fr;
+            gap: 67px;
+            grid-template-areas: "footerinfo footerexplore footermusic footerartists footerrecords";
+        }
+        .footer-link {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }

@@ -45,3 +45,14 @@ form {
 }
 
 /*22px*/
+
+@media screen and (min-width: 992px) {
+    form {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 24px;
+        column-gap: 32px;
+    }
+    .input-item:has(textarea) {
+        grid-column: span 2;
+    }
+}

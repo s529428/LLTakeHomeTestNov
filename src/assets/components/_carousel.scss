@@ -1,10 +1,51 @@
 .card {
     background-color: $white;
     padding: 68px 24px;
+    margin: 0 16px;
 
     .card-content {
         display: flex;
         flex-direction: column;
         gap: 25px;
+
+        .card__img-column img {
+            width: 100%;
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .glide__slide:not(.slick-current) {
+        opacity: 50%;
+    }
+    .glide__slide {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    .card {
+        max-width: 570px;
+        .card-content {
+            flex-direction: row;
+            .card__content-column {
+                flex-basis: 75%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .glide__slide {
+        //width: auto !important;
+    }
+    .card {
+        .card-content {
+            .card__img-column {
+                width: 36%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .card {
+        margin: auto;
     }
 }

@@ -11,10 +11,11 @@
         a {
             text-decoration: none;
             display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                gap: 10px;
-            &:hover {}
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            &:hover {
+            }
         }
     }
 }
@@ -23,8 +24,8 @@ header {
     position: -webkit-sticky;
     /* Safari */
     position: sticky;
-        top: 0;
-
+    top: 0;
+    z-index: 99;
 }
 
 nav {
@@ -53,7 +54,7 @@ nav {
         transform: translateY(100%);
 
         //position: absolute;
-        &>* {
+        & > * {
             display: block;
         }
     }
@@ -62,7 +63,7 @@ nav {
         display: block;
         position: absolute;
         right: 25px;
-            top: 10px;
+        top: 10px;
         height: 100%;
         font-size: 32px;
         color: $blue;
@@ -74,5 +75,39 @@ nav {
 
     a {
         color: $blue;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    nav {
+        overflow: hidden;
+        padding: 10px 50px;
+        height: unset;
+        .menu {
+            position: relative;
+            transform: none;
+            background-color: transparent;
+            padding: 0;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 170px;
+            & > * {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        #mobileMenuButton {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    nav {
+        .menu .page-menu {
+            gap: 61px;
+            justify-content: center;
+        }
     }
 }

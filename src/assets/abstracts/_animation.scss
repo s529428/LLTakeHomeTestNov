@@ -1,0 +1,14 @@
+@keyframes zoomEffect {
+    0% {
+        background-position: center;
+        background-size: 200%;
+    }
+    50% {
+        background-position: center;
+        background-size: 300%;
+    }
+    100% {
+        background-position: center;
+        background-size: 200%;
+    }
+}
